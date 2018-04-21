@@ -1,1 +1,13 @@
-body, html, ul, ol, li, input, select, fieldset { margin: 0; font-family: 'Open Sans'; }
+body, html, ul, ol, li, input, select, fieldset { margin: 0; font-family: 'Open Sans'; font-size: 12px; color: blue; }
+
+.columns { width: 100%; background: white; color: black; }
+
+.row { width: 50%; color: #4a4a4a; }
+
+div { color: blue; font-size: 14px; }
+
+.columns { width: 100%; background: white; color: black; }
+
+.row { width: 50%; color: #4a4a4a; }
+
+div { color: blue; font-size: 14px; }
