@@ -4,12 +4,17 @@
   "dependencies": {
     "@rails/webpacker": "3.4",
     "babel-preset-react": "^6.24.1",
+    "del": "^3.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^3.1.0",
     "prop-types": "^15.6.1",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
     "react_ujs": "^2.4.4"
   },
   "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^4.1.0",
     "webpack-dev-server": "2.11.2"
   }
 }
