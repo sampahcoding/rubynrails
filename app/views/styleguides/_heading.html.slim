@@ -1,0 +1,17 @@
+h1.--light.--red HEADING
+.flexwrapper.bottom-gap
+  .flex-columns-8
+    - (1..6).each do |heading|
+      .flex-columns-2
+        p.--small = "h#{heading}.--big.--light"
+      .flex-columns-10
+        *{tag: "h#{heading}", class: "--big --light"}
+          | HEADING
+.flexwrapper.bottom-gap
+  .flex-columns-8
+    - (1..6).each do |heading|
+      .flex-columns-2
+        p.--small = "h#{heading}"
+      .flex-columns-10
+        *{tag: "h#{heading}", class: ""}
+          | HEADING

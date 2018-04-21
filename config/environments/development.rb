@@ -62,4 +62,22 @@ Rails.application.configure do
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+
+
+  # Sprockets configuration: prevent sprockets from caching assets in development
+  # when cache_classes is set to true
+  sprockets_env = nil
+  config.assets.configure do |env|
+    sprockets_env = env
+
+    # Sprockets environment configuration goes here
+    # env.js_compressor  = :uglifier # or :closure, :yui
+    # env.css_compressor = :sass   # or :yui
+  end
+
+  if config.cache_classes
+    config.after_initialize do
+      Rails.application.assets = sprockets_env
+    end
+  end
 end

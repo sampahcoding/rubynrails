@@ -1,0 +1,27 @@
+- blue = [{ name:"$blue-7", color: "#1a8ac7" },
+{ name:"$blue-6", color: "#1d99de" },
+{ name:"$blue-5", color: "#30a4e4" },
+{ name:"$blue", color: "#47aee7" },
+{ name:"$blue-3", color: "#5eb8ea" },
+{ name:"$blue-2", color: "#74c2ed" },
+{ name:"$blue-1" , color: "#8bccf0" }]
+
+- red = [{ name:"$red-1", color: "#ef8b90" },
+{ name:"$red-2", color: "#ec757b" },
+{ name:"$red-3", color: "#e95e65" },
+{ name:"$red-4", color: "#e64850" },
+{ name:"$red-5", color: "#e3323b" },
+{ name:"$red-6", color: "#dd1e28" },
+{ name:"$red-7", color: "#c61b24" } ]
+
+h1.--light.--red COLOR
+.flexwrapper.bottom-gap
+  - blue.each_with_index do |color, i|
+    .flex-columns-1
+      .placing style="background-color:#{color[:color]};height: 70px;"
+      = color[:name]
+.flexwrapper
+  - red.each_with_index do |color, i|
+    .flex-columns-1
+      .placing style="background-color:#{color[:color]};height: 70px;"
+      = color[:name]

@@ -1,7 +1,46 @@
-body,html,ul,ol,li,input,select,fieldset
-  margin: 0
-  font-family: 'Open Sans'
-  font-size: 12px
-  color: blue
+@import "base/var"
 
+
+*
+  box-sizing: border-box
+
+html, body
+  text-rendering: optimizeLegibility
+  font-family: 'Open Sans'
+  font-size: $font-size-normal
+  color: $black-text
+
+body,html,ul,ol,li,input,select,fieldset, section, ul, ol
+  margin: 0
+  padding: 0
+
+html
+   height: 100%;
+
+body
+   min-height: 100%;
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary
+  display: block
+
+.container
+  max-width: 1280px
+  margin: auto
+
+ol, ul
+  list-style-type: none
+
+img
+  max-width: 100%
+
+a
+  text-decoration: none
+
+  &:hover
+    cursor: pointer
+    text-decoration: underline
+
+@import "base/typhography"
+@import "base/border"
 @import "base/grid"
+@import "components/home"

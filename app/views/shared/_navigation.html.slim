@@ -1,0 +1,19 @@
+= image_tag "logo.png"
+ol.nav__list
+  li
+    = link_to "javascript:void(0)" do
+      h3.--light.--white onClick="goTo('#introduction')" Introduction
+  li
+    = link_to "javascript:void(0)" do
+      h3.--light.--white onClick="goTo('#styleguide')" Styleguide
+    hr
+  li
+    = link_to search_path do
+      h3.--light.--white Search
+      
+javascript:
+  function goTo(id) {
+    $('html, body').animate({
+      scrollTop: $(id).offset().top
+    }, 800);
+  }

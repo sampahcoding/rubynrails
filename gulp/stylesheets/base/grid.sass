@@ -1,12 +1,50 @@
-.columns
-  width: 100%
-  background: white
-  color: black
+$class-columns: columns !default
+$class-flex: flex-columns !default
+$phone: "(max-width: 767px)"
+$tablet: "(min-width: 768px) and (max-width: 1023px)"
+$desktop: "(min-width: 1024px)"
+
+=clearfix
+  &:after
+    content: ""
+    display: table
+    clear: both
+
+=grid($i)
+  float: left
+  $width: (100% / (12/$i))
+  width: $width
+  @media #{$phone}
+    width: 100%
+  @media #{$tablet}
+    @if $width < 42%
+      width: 100%
+    @elseif $width >= 75%
+      width: 100%
+    @else
+      min-width: 50%
+
+@for $i from 1 through 12
+  .#{$class-columns}-#{$i}
+    +grid($i)
 
 .row
-  width: 50%
-  color: #4a4a4a
+  +clearfix
 
-div
-  color: blue
-  font-size: 14px
+
+//-----------------------------------------//
+//---FLEXBOX----//
+//-----------------------------------------//
+
+.flexwrapper
+  display: flex
+  flex-wrap: nowrap
+  justify-content: center
+
+=flex($i)
+  $width: (100% / (12/$i))
+  width: $width
+
+@for $i from 1 through 12
+  .#{$class-flex}-#{$i}
+    +grid($i)
