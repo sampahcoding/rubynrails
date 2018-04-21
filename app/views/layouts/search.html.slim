@@ -1,0 +1,10 @@
+doctype html
+html
+  head
+    title Ruby on rails
+    = csrf_meta_tags
+    = csp_meta_tag
+    = javascript_pack_tag 'hello_react'
+
+  body
+    = yield
