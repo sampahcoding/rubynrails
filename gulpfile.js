@@ -19,11 +19,11 @@ gulp.task('sass', function () {
     .on('error', sass.logError))
 		.pipe( autoprefixer( config.BROWSERS_LIST ) )
     .pipe(concat('application.css'))
-    .pipe(gulp.dest('./app/assets/stylesheets'));
+    .pipe(gulp.dest('./app/javascript/src'));
 });
 
 gulp.task('clean:templates', function() {
-  return del(['./app/assets/stylesheets']);
+  return del(['./app/javascript/src']);
 });
 
 gulp.task('watch', function () {

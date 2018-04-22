@@ -35,3 +35,6 @@ yarn-debug.log*
 .yarn-integrity
 .DS_Store
 yarn.lock
+
+#ignore compiled stylesheet from gulp
+/app/javascript/src/*
