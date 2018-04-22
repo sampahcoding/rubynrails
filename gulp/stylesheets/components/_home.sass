@@ -1,5 +1,7 @@
 .nav
   background-color: $blue-7
+  position: fixed
+  z-index: $z-index-3
 
   &__list
     min-height: 100vw
@@ -21,6 +23,9 @@
       right: 0
       top: 0
   &__logo
+    @media #{$lower-than-desktop}
+      height: 70px
+  &__bulker
     @media #{$lower-than-desktop}
       height: 70px
 .placing

@@ -12,9 +12,10 @@ html
 
   body
     .row
-      section.columns-2.nav
+      section.nav.columns-2
         = render 'shared/navigation'
-      
+      .columns-2.nav__bulker
+        | &nbsp
       section.columns-10.placing
         = yield
   footer
