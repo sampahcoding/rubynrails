@@ -1,0 +1,47 @@
+h2.--red FORM INPUT
+// inputs text
+.flexwrapper
+  .flex-columns-10
+    .flex-columns-6.placing
+      h3 Default 100%
+      input type="text" placeholder="Type something here.."
+    .flex-columns-6.placing
+      h3
+        | Input error&nbsp&nbsp&nbsp&nbsp
+        span.--small rails default .field_with_errors
+      .field_with_errors
+        input type="email" placeholder="Type something here.."
+        span.--error Please type correct input
+.flexwrapper
+  .flex-columns-10
+    .flex-columns-6.placing
+      h3 Password
+      input type="password" value="handsome"
+    .flex-columns-6.placing
+      h3 Input disabled
+      input type="text" disabled=true value="handsome@email.com"
+// Textarea
+.flexwrapper
+  .flex-columns-10
+    .flex-columns-6.placing
+      h3 Textarea
+      textarea value="handsome"
+    .flex-columns-6.placing
+      h3 Textarea
+      .field_with_errors
+        textarea placeholder="Type something here.."
+        span.--error Please type correct input
+//input with icons        
+.flexwrapper
+  .flex-columns-10
+    .flex-columns-6.placing
+      h3 Big input search
+      .input-icon.--big
+        input type="text" value="Sweet" class="--big"
+        i class="material-icons" search
+    .flex-columns-6.placing
+      h3 Input error
+      .input-icon
+        input type="text" placeholder="Type something here.."
+        i class="material-icons" search
+    

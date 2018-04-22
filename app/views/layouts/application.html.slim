@@ -7,10 +7,15 @@ html
     meta name="viewport" content="width=device-width, initial-scale=0.41, minimum-scale=1.0, maximum-scale=1"
     link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600,700" rel="stylesheet"
     = stylesheet_pack_tag 'application'
-    = javascript_include_tag "application"
+    = javascript_include_tag "vendor"
     = javascript_pack_tag 'application'
 
   body
-    = yield
+    .row
+      section.columns-2.nav
+        = render 'shared/navigation'
+      
+      section.columns-10.placing
+        = yield
   footer
     

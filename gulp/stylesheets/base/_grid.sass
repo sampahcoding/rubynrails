@@ -37,10 +37,13 @@ $class-flex: flex-columns !default
   display: flex
   flex-wrap: nowrap
   justify-content: center
+  align-items: top
 
 =flex($i)
   $width: (100% / (12/$i))
   width: $width
+  @media #{$phone}
+    width: 100%
 
 @for $i from 1 through 12
   .#{$class-flex}-#{$i}

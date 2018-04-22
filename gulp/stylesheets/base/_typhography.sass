@@ -4,6 +4,7 @@
 h1,h2,h3,h4,h5,h6
   letter-spacing: 0.5px
   color: $blue-7
+  font-weight: 600
 
   &.\-\-white
     color: white
@@ -22,14 +23,17 @@ h1,h2,h3,h4,h5,h6
 
 
 @for $i from 1 through 6
+  $size: ($h1+$decreaseBy) - $i * $decreaseBy
   h#{$i}.\-\-big
-    font-size: ($h1+$decreaseBy) - $i * $decreaseBy
-
+    font-size: $size
+    @media #{$phone}
+      @if $i < 4
+        font-size: $size - 0.3em
 //-----------------------------------------//
 //  others
 //-----------------------------------------//
 
-p
+p, span
   font-size: 1.2em
   font-weight: 300
   letter-spacing: 0.2px
@@ -39,7 +43,7 @@ p
     font-size: 0.9em
     font-weight: 600
     @media #{$lower-than-desktop}
-      font-size: 1.2em
+      font-size: 1em
 
 //-----------------------------------------//
 //  LINK
@@ -54,3 +58,7 @@ a
   &:hover
     cursor: pointer
     text-decoration: underline
+
+h1,h2,h3,h4,h5,h6,p,span
+  &.\-\-inline
+    display: inline

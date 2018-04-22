@@ -1,4 +1,7 @@
-function goTo(id) {
+function goTo(id, link) {
+  if ($(id).length == 0) {
+    return window.location.href = link;
+  }
   $('html, body').animate({
     scrollTop: $(id).offset().top
   }, 800);

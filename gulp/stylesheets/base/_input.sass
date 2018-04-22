@@ -1,0 +1,58 @@
+input:not([type='submit']), select, option, textarea
+  border-radius: $default-border
+  height: $input-height
+  border: 1px solid $grey-3
+  outline: none !important
+  width: 100%
+  padding: 0 1em
+  color: $black-text-4
+  font-size: $font-size-content
+  &::placeholder, &:disabled
+    color: $grey-1
+    font-weight: 300
+  &:disabled
+    background-color: $grey-4
+  &:focus
+    border-color: $blue-1
+  &.\-\-big
+    height: 40px
+    border-radius: $default-border * 2
+
+textarea
+  height: $input-height * 2
+  padding: 1em
+
+  &.\-\-big
+    height: $input-height * 4
+
+//-----------------------------------------//
+//------------ERROR----------//
+//-----------------------------------------//
+
+.field_with_errors
+  input, select, option, textarea
+    border-color: $red-1
+  span.\-\-error, .\-\-error
+    color: $red-1
+
+.input-icon
+  position: relative
+  width: 100%
+  padding-right: 2em
+  i
+    +border-right-radius($default-border)
+    position: absolute
+    right: 0px
+    margin: auto
+    padding: 0 0.2em
+    top: 0
+    line-height: 1.5
+    color: white
+    bottom: 0
+    background-color: $blue-1
+    vertical-align: middle
+    height: auto
+  &.\-\-big
+    i
+      +border-right-radius($default-border * 2)
+      padding: 0 0.4em

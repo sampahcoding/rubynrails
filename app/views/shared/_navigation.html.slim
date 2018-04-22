@@ -1,12 +1,13 @@
-= image_tag "splashscreen.gif", class: 'nav__logo'
+= link_to "/" do
+  = image_tag "splashscreen.gif", class: 'nav__logo'
 i class="material-icons --white nav__slider" onClick="toogle('#nav-list')" line_weight
 ol.nav__list#nav-list
   li
     = link_to "javascript:void(0)", class: '--white' do
-      h3.--light.--white onClick="goTo('#introduction')" Introduction
+      h3.--light.--white onClick="goTo('#introduction', '/#introduction')" Introduction
   li
     = link_to "javascript:void(0)", class: '--white' do
-      h3.--light.--white onClick="goTo('#styleguide')" Styleguide
+      h3.--light.--white onClick="goTo('#styleguide', '/#styleguide')" Styleguide
     hr
   li
     = link_to search_path , class: '--white' do
