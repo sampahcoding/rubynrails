@@ -11,3 +11,4 @@ Cheatsheet:
     gulp build
     gulp watch
     ./bin/webpack-dev-server to hot reload js and css
+* icon fonts using material [https://material.io/icons/]

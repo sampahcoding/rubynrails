@@ -15,6 +15,7 @@
   "devDependencies": {
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^4.1.0",
+    "sass-loader": "^7.0.1",
     "webpack-dev-server": "2.11.2"
   }
 }

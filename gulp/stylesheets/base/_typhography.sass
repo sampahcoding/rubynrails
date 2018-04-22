@@ -1,3 +1,6 @@
+//-----------------------------------------//
+//  HEADING
+//-----------------------------------------//
 h1,h2,h3,h4,h5,h6
   letter-spacing: 0.5px
   color: $blue-7
@@ -17,17 +20,37 @@ h1,h2,h3,h4,h5,h6
   &.\-\-super-bold
     font-weight: 600
 
-$h1: 3.5em
-$decreaseBy: 0.5em
+
 @for $i from 1 through 6
   h#{$i}.\-\-big
     font-size: ($h1+$decreaseBy) - $i * $decreaseBy
+
+//-----------------------------------------//
+//  others
+//-----------------------------------------//
 
 p
   font-size: 1.2em
   font-weight: 300
   letter-spacing: 0.2px
-
+  @media #{$lower-than-desktop}
+    font-size: 1.2em
   &.\-\-small
     font-size: 0.9em
     font-weight: 600
+    @media #{$lower-than-desktop}
+      font-size: 1.2em
+
+//-----------------------------------------//
+//  LINK
+//-----------------------------------------//
+
+a
+  text-decoration: none
+
+  &.\-\-white
+    color: white
+
+  &:hover
+    cursor: pointer
+    text-decoration: underline

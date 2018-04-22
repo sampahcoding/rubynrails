@@ -1,19 +1,13 @@
-= image_tag "logo.png"
-ol.nav__list
+= image_tag "splashscreen.gif", class: 'nav__logo'
+i class="material-icons --white nav__slider" onClick="toogle('#nav-list')" line_weight
+ol.nav__list#nav-list
   li
-    = link_to "javascript:void(0)" do
+    = link_to "javascript:void(0)", class: '--white' do
       h3.--light.--white onClick="goTo('#introduction')" Introduction
   li
-    = link_to "javascript:void(0)" do
+    = link_to "javascript:void(0)", class: '--white' do
       h3.--light.--white onClick="goTo('#styleguide')" Styleguide
     hr
   li
-    = link_to search_path do
+    = link_to search_path , class: '--white' do
       h3.--light.--white Search
-      
-javascript:
-  function goTo(id) {
-    $('html, body').animate({
-      scrollTop: $(id).offset().top
-    }, 800);
-  }
